@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+
+    /* Hide scrollbar */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+       /* Smooth progress bar animation */
+       .animate-progress {
+        transition: width 1.5s ease-in-out;
+    }
+
+    </style>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md flex justify-between items-center p-4 md:px-12 z-50">
+        <div class="w-24">
+            <a href="#"><img src="https://via.placeholder.com/100" alt="Logo" class="w-full"></a>
+        </div>
+        <div id="menu" class="hidden md:flex items-center space-x-6">
+            <a href="#about" class="text-black">ABOUT ME</a>
+            <a href="#projects" class="text-black">PROJECTS</a>
+            <a href="#testimonials" class="text-black">TESTIMONIALS</a>
+            <a href="#contact" class="border border-black px-4 py-2 hover:bg-black hover:text-white transition">CONTACT ME</a>
+        </div>
+        <button id="menu-btn" class="md:hidden px-4 py-2 border border-black">☰</button>
+        <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md flex flex-col space-y-4 p-4">
+            <a href="#about" class="text-black">ABOUT ME</a>
+            <a href="#projects" class="text-black">PROJECTS</a>
+            <a href="#testimonials" class="text-black">TESTIMONIALS</a>
+            <a href="#contact" class="border border-black px-4 py-2 hover:bg-black hover:text-white transition">CONTACT ME</a>
+        </div>
+    </nav> 
+
+<!-- Hero Section -->
+<header class="flex flex-col md:flex-row justify-around items-center h-screen px-6 md:px-12 text-center md:text-left bg-gradient-to-r from-gray-100 to-gray-200">
+    <div class="md:w-1/2">
+        <p class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">I'm <span class="text-black">Oluwatobi Olowonjo</span>,</p>
+        <p class="text-2xl text-gray-700 mt-2">A Creative Graphic Designer</p>
+        <p class="text-lg text-gray-600 mt-4">I craft stunning visuals that elevate brands and make an impact.</p>
+        <div class="flex gap-4 mt-6 justify-center md:justify-start">
+            <a href="#projects" class="bg-black text-white px-6 py-3 rounded-full shadow-md hover:bg-gray-800 transition">View Portfolio</a>
+            <a href="#contact" class="border border-black text-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition">Contact Me</a>
+        </div>
+    </div>
+    <div class="md:w-1/3 relative">
+        <!-- Circular Image with Gradient Effect -->
+        <div class="relative w-64 h-64 md:w-72 md:h-72 rounded-full bg-gradient-to-b from-gray-300 to-gray-500 flex items-center justify-center shadow-lg">
+            <img src="./images/Screenshot_20241107-042827_LE_auto_x4_light_aij-removebg-preview.png" alt="Your Picture" class="w-60 h-60 md:w-64 md:h-64 object-cover rounded-full border-4 border-white shadow-xl">
+        </div>
+    </div>
+</header>
+
+<!-- Projects Section -->
+<section id="projects" class="py-16 px-6 md:px-12 text-center">
+<h2 class="text-3xl font-semibold">Projects</h2>
+<div id="project-container" class="flex overflow-x-auto gap-6 mt-6 p-4 scrollbar-hide">
+    <!-- Project Cards -->
+    <div class="project-card min-w-[270px] h-[270px] bg-white shadow-md rounded-lg flex-shrink-0 relative transition-transform duration-300 cursor-pointer">
+        <img src="./images/FHS february2.jpg" alt="Design 1" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <div class="project-card min-w-[270px] h-[270px] bg-white shadow-md rounded-lg flex-shrink-0 relative transition-transform duration-300 cursor-pointer">
+        <img src="./images/Elegance Kouture flyer black.jpg" alt="Design 2" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <div class="project-card min-w-[270px] h-[270px] bg-white shadow-md rounded-lg flex-shrink-0 relative transition-transform duration-300 cursor-pointer">
+        <img src="./images/FHS Valentine2.jpg" alt="Design 3" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <div class="project-card min-w-[270px] h-[270px] bg-white shadow-md rounded-lg flex-shrink-0 relative transition-transform duration-300 cursor-pointer">
+        <img src="./images/ALBUM.jpg" alt="Design 3" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <div class="project-card min-w-[270px] h-[270px] bg-white shadow-md rounded-lg flex-shrink-0 relative transition-transform duration-300 cursor-pointer">
+        <img src="./images/OABC---Easter-Cantata.jpg" alt="Design 3" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <div class="project-card min-w-[270px] h-[270px] bg-white shadow-md rounded-lg flex-shrink-0 relative transition-transform duration-300 cursor-pointer">
+        <img src="./images/tailorrr.jpg" alt="Design 3" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <div class="project-card min-w-[270px] h-[270px] bg-white shadow-md rounded-lg flex-shrink-0 relative transition-transform duration-300 cursor-pointer">
+        <img src="./images/PICNIC.jpg" alt="Design 3" class="w-full h-full object-cover rounded-lg">
+    </div>
+</div>
+</section>
+
+
+    <!-- About Me -->
+    <section id="about" class="py-16 px-6 md:px-12 text-center md:text-left">
+        <h2 class="text-3xl font-semibold">About Me</h2>
+        <p class="mt-4 text-gray-600">I am a highly creative Graphic Designer with 4 years of experience in visual storytelling, branding, social media design. Skilled in Adobe Photoshop, CorelDraw, Illustrator, and Figma, I bring brands to life through innovative design solutions. Passionate about modern design trends and visual communication.</p>
+    </section>
+<!-- Work Experience Section -->
+<section id="experience" class="py-16 px-6 md:px-12 text-center md:text-left bg-gray-100">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Work Experience</h2>
+
+    <div class="space-y-8">
+        <!-- Job 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-black">
+            <h3 class="text-xl font-bold text-gray-900">Freelance Graphic Designer</h3>
+            <p class="text-gray-700 italic">Self-Employed | 2020 - Present</p>
+            <ul class="list-disc list-inside text-gray-600 mt-3 space-y-2">
+                <li>Worked with 10+ clients on branding, social media, and print designs.</li>
+                <li>Created high-quality, socil media design, marketing materials, logos, and promotional graphics.</li>
+                <li>Developed UI/UX designs for web and mobile applications.</li>
+            </ul>
+            <button class="see-designs-btn mt-4 bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition">See Designs</button>
+
+            <!-- Design Gallery (Hidden Initially) -->
+            <div class="design-gallery hidden mt-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <img src="./images/Elegance Kouture flyer black.jpg" alt="Design 1" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="./images/tailorrr.jpg" alt="Design 2" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="./images/client-reckitt_benckiser.png" alt="Design 3" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+                <button class="back-btn mt-4 bg-gray-700 text-white px-6 py-2 rounded-md hover:bg-gray-900 transition">Back</button>
+            </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-black">
+            <h3 class="text-xl font-bold text-gray-900">Senior Graphic Designer</h3>
+            <p class="text-gray-700 italic">Female Hygiene Support | 2023 - Present</p>
+            <ul class="list-disc list-inside text-gray-600 mt-3 space-y-2">
+                <li>Designed engaging social media visuals, increasing brand awareness.</li>
+                <li>Collaborated with marketing teams to create impactful advertising materials.</li>
+                <li>Produced high-quality print and digital designs for various clients.</li>
+            </ul>
+            <button class="see-designs-btn mt-4 bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition">See Designs</button>
+
+            <!-- Design Gallery (Hidden Initially) -->
+            <div class="design-gallery hidden mt-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <img src="https://via.placeholder.com/250" alt="Design 4" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/250" alt="Design 5" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/250" alt="Design 6" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+                <button class="back-btn mt-4 bg-gray-700 text-white px-6 py-2 rounded-md hover:bg-gray-900 transition">Back</button>
+            </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-black">
+            <h3 class="text-xl font-bold text-gray-900">Lead UI/UX Designer</h3>
+            <p class="text-gray-700 italic">Tech Startup | 2021 - 2023</p>
+            <ul class="list-disc list-inside text-gray-600 mt-3 space-y-2">
+                <li>Designed user-friendly web and mobile interfaces for startup projects.</li>
+                <li>Conducted UX research to improve product usability.</li>
+                <li>Led a team of designers to deliver high-quality design solutions.</li>
+            </ul>
+            <button class="see-designs-btn mt-4 bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition">See Designs</button>
+
+            <!-- Design Gallery (Hidden Initially) -->
+            <div class="design-gallery hidden mt-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <img src="https://via.placeholder.com/250" alt="Design 7" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/250" alt="Design 8" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/250" alt="Design 9" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+                <button class="back-btn mt-4 bg-gray-700 text-white px-6 py-2 rounded-md hover:bg-gray-900 transition">Back</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll(".see-designs-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+            const gallery = this.nextElementSibling;
+            gallery.classList.toggle("hidden");
+        });
+    });
+
+    document.querySelectorAll(".back-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+            const gallery = this.parentElement;
+            gallery.classList.add("hidden");
+        });
+    });
+</script>
+
+    <!-- Skills & Expertise Section -->
+<!-- Skills & Expertise Section -->
+<section id="skills" class="py-16 px-6 md:px-12 text-center">
+    <h2 class="text-4xl font-semibold mb-10 text-gray-800">Skills & Expertise</h2>
+
+    <div class="max-w-3xl mx-auto space-y-6">
+        <!-- Skill Item -->
+        <div class="text-left">
+            <p class="text-lg font-medium text-gray-700 mb-2">Communication Skills - 100%</p>
+            <div class="relative w-full h-6 bg-gray-300 rounded-xl overflow-hidden shadow-md">
+                <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-black to-gray-700 rounded-xl animate-progress" style="width: 100%;"></div>
+            </div>
+        </div>
+
+        <div class="text-left">
+            <p class="text-lg font-medium text-gray-700 mb-2">Photoshop - 100%</p>
+            <div class="relative w-full h-6 bg-gray-300 rounded-xl overflow-hidden shadow-md">
+                <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl animate-progress" style="width: 100%;"></div>
+            </div>
+        </div>
+
+        <div class="text-left">
+            <p class="text-lg font-medium text-gray-700 mb-2">Illustrator - 95%</p>
+            <div class="relative w-full h-6 bg-gray-300 rounded-xl overflow-hidden shadow-md">
+                <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl animate-progress" style="width: 95%;"></div>
+            </div>
+        </div>
+
+        <div class="text-left">
+            <p class="text-lg font-medium text-gray-700 mb-2">Brand Identity - 90%</p>
+            <div class="relative w-full h-6 bg-gray-300 rounded-xl overflow-hidden shadow-md">
+                <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-purple-500 to-purple-300 rounded-xl animate-progress" style="width: 90%;"></div>
+            </div>
+        </div>
+
+        <div class="text-left">
+            <p class="text-lg font-medium text-gray-700 mb-2">UI/UX Design - 85%</p>
+            <div class="relative w-full h-6 bg-gray-300 rounded-xl overflow-hidden shadow-md">
+                <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-green-500 to-green-300 rounded-xl animate-progress" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div class="text-left">
+            <p class="text-lg font-medium text-gray-700 mb-2">Time Management- 94.5%</p>
+            <div class="relative w-full h-6 bg-gray-300 rounded-xl overflow-hidden shadow-md">
+                <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-purple-500 to-purple-300 rounded-xl animate-progress" style="width: 95%;"></div>
+            </div>
+        </div>
+        <div class="text-left">
+            <p class="text-lg font-medium text-gray-700 mb-2">Creativity & Problem Solving - 95%</p>
+            <div class="relative w-full h-6 bg-gray-300 rounded-xl overflow-hidden shadow-md">
+                <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-red-500 to-red-300 rounded-xl animate-progress" style="width: 95%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Contact Me -->
+    <section id="contact" class="py-16 px-6 md:px-12 text-center">
+        <h2 class="text-3xl font-semibold">Contact Me</h2>
+        <form class="mt-6">
+            <input type="text" placeholder="Your Name" class="block w-full p-2 border border-gray-300 rounded mb-4">
+            <input type="email" placeholder="Your Email" class="block w-full p-2 border border-gray-300 rounded mb-4">
+            <textarea placeholder="Your Message" class="block w-full p-2 border border-gray-300 rounded mb-4"></textarea>
+            <button type="submit" class="bg-black text-white px-6 py-2">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            let menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll("nav a").forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+            });
+        });
+
+        document.querySelectorAll(".project-card").forEach((card) => {
+    card.addEventListener("click", function () {
+        // Remove enlarge effect from all cards
+        document.querySelectorAll(".project-card").forEach(c => c.classList.remove("scale-110", "z-10"));
+
+        // Add enlarge effect to the clicked card
+        this.classList.add("scale-110", "z-10");
+    });
+});
+
+    </script>
+
+</body>
+</html>
